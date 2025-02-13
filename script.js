@@ -48,3 +48,16 @@ function createPhrase() {
 // Запускаємо створення сердечок та фраз постійно
 setInterval(createHeart, 500); // Сердечко кожні 0.5 сек
 setInterval(createPhrase, 2000); // Фраза кожні 2 сек
+
+const correctPassword = "мяу"; // Твій пароль тут!
+
+function checkPassword() {
+    let inputPassword = document.getElementById("password-input").value;
+
+    if (inputPassword === correctPassword) {
+        document.getElementById("password-screen").style.display = "none"; // Ховаємо екран пароля
+        document.getElementById("main-content").style.display = "block"; // Показуємо сайт
+    } else {
+        document.getElementById("error-message").style.display = "block"; // Відображаємо помилку
+    }
+}
